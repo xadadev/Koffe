@@ -1,0 +1,339 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Manrope", sans-serif;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+/* 10. custom */
+a {
+  text-decoration: none;
+  color: hsl(0deg 0% 0%);
+}
+
+li {
+  list-style: none;
+  letter-spacing: 0.02em;
+}
+button {
+  cursor: pointer;
+}
+
+/* --------- Css Reset Ends --------- */
+
+:root {
+  --main-color: hsl(156deg 100% 19%);
+}
+
+/* ----------- Main Style ----------- */
+
+
+
+
+body {
+  width: 80%;
+  margin: 0 auto;
+  background: rgb(213, 234, 227);
+   
+
+  background: linear-gradient(
+    274deg,
+    rgba(213, 234, 227, 1) 0%,
+    rgba(161, 212, 193, 1) 99%
+  );
+}
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.logo {
+  flex: 1 2 0;
+}
+
+.logo img {
+  max-width: 100px;
+}
+
+.koffe__nav {
+  flex: 2 2 0;
+}
+
+.koffe__ul {
+  display: flex;
+  gap: 2rem;
+}
+
+.koffe__ul a {
+  font-weight: 500;
+}
+
+.koffe__ul a:last-of-type {
+  margin-right: auto;
+}
+
+.btn {
+  border: none;
+  padding: 0.2rem 0.8rem;
+  background: var(--main-color);
+  border-radius: 6px;
+  color: #fff;
+  transition: transform 1s linear 0.3s;
+  -webkit-transition: transform 1s linear 0.3s;
+  -moz-transition: transform 1s linear 0.3s;
+  -ms-transition: transform 1s linear 0.3s;
+  -o-transition: transform 1s linear 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-5px) !important;
+  -webkit-transform: translateY(-5px) !important;
+  -moz-transform: translateY(-5px) !important;
+  -ms-transform: translateY(-5px) !important;
+  -o-transform: translateY(-5px) !important;
+}
+
+.koffe__menu-btn {
+  display: none;
+}
+
+rect {
+  transition: height 1s ease-in-out;
+}
+
+/* ---------------------------------- */
+/*                HERO                */
+/* ---------------------------------- */
+#hero {
+  display: grid;
+    justify-items: center;
+    gap: 25%;
+    grid-template-rows: 50% 50%;
+    align-items: end;
+    align-content: center;
+
+}
+
+.hero {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  max-height: calc(100vh - 100px);
+}
+
+.heading {
+  font-size: 90px;
+  line-height: 80px;
+  letter-spacing: -0.03em;
+  text-transform: capitalize;
+  color: var(--main-color);
+}
+
+.hero__subtitle {
+  color: #ffffff;
+  text-shadow: 0px 6px 9px rgba(0, 0, 0, 0.1);
+}
+
+.hero__bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: stretch;
+  flex-direction: column;
+  position: relative;
+ 
+}
+
+.particls{
+  position: absolute;
+  object-fit: cover;
+  width: 80px;
+  height: 177px;
+  z-index: -1;
+
+}
+
+.left {
+ left: -10%;
+}
+
+.right {
+    right: -10%;
+}
+
+
+/* ---------------------------------- */
+/*            MEDIA QUIRES            */
+/* ---------------------------------- */
+
+/* ------- Mobile Media Quires ------ */
+
+@media (max-width: 450px) {
+
+  header{
+    margin-bottom: 3.5rem;
+  }
+#hero {
+    gap: 2.5rem;
+    grid-template-rows: auto;
+}
+}
+
+/* ------ Tablet  Media Quires ------ */
+
+/* media quires for mobile menu start from 950px */
+@media (max-width: 950px) {
+  .koffe__nav {
+    position: fixed;
+    top: 100px;
+    right: 130%;
+    width: 100%;
+    height: calc(100vh - 100px);
+    background: rgb(213, 234, 227);
+    background: linear-gradient(
+      274deg,
+      rgb(7 21 17 / 99%) 0%,
+      rgb(127 216 183 / 93%) 99%
+    );
+    backdrop-filter: blur(50px);
+    box-shadow: inset hsl(157deg 2% 28%) 1px 5px 60px -12px, rgb(255 255 255) 0px -9px 36px -18px;
+    z-index: 100;
+  }
+
+  .koffe__nav.open {
+    right: 0;
+    overflow: hidden I !important;
+    transition: 1s linear;
+    -webkit-transition: 1s linear;
+    -moz-transition: 1s linear;
+    -ms-transition: 1s linear;
+    -o-transition: 1s linear;
+  }
+
+  .koffe__ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+  }
+
+  .koffe__ul a {
+    color: #fff;
+    font-size: 1.5rem;
+  }
+
+  .koffe__ul a:last-of-type {
+    margin-right: 0;
+  }
+
+  .koffe__ul li {
+    margin-top: 30px;
+  }
+
+  .koffe__menu-btn {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+    width: 40px;
+    cursor: pointer;
+    z-index: 101;
+  }
+
+  .koffe__menu-btn img {
+    transition: all 1.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+  }
+  .koffe__menu-btn.open img {
+    transform: translateY(10px) rotate(180deg);
+    -webkit-transform: translateY(10px) rotate(180deg);
+    -moz-transform: translateY(10px) rotate(180deg);
+    -ms-transform: translateY(10px) rotate(180deg);
+    -o-transform: translateY(10px) rotate(180deg);
+  }
+
+/* ------ Coffe Beans Particles on 950px ----- */
+
+}
+
+
+
+
+
+
+
+
+
+
