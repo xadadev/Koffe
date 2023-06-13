@@ -7,7 +7,7 @@ Welcome to Koffe, where fitness and coffee merge to create an extraordinary expe
 
 
 
-## Screenshots
+## Screenshots 
 
 
 
@@ -59,7 +59,7 @@ Welcome to Koffe, where fitness and coffee merge to create an extraordinary expe
 
 This project is used by the following:
 
-- Figma file https://www.figma.com/community/file/909921597372537787
+- Figma file https://www.figma.com/community/file/988490573132085597
 
 
 ## Demo
